@@ -19,7 +19,8 @@ on:
   push:
     branches: [ "main" ]
     paths:
-      - 'Vehiculo.Web/Vehiculo.Web**' 
+      - 'Vehiculo.Api/BD/**'
+      - 'Vehiculo.Web/Vehiculo.Web/**' 
   workflow_dispatch:
 
 permissions:
