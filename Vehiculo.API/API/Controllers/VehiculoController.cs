@@ -22,8 +22,8 @@ namespace API.Controllers
         [HttpPost]
         public async Task<IActionResult> Agregar([FromBody] VehiculoRequest vehiculo)
         {
-            var resultado= await _vehiculoFlujo.Agregar(vehiculo);
-            return CreatedAtAction(nameof(Obtener),new {Id=resultado },null);
+            var resultado = await _vehiculoFlujo.Agregar(vehiculo);
+            return CreatedAtAction(nameof(Obtener), new { Id = resultado }, resultado); 
         }
         [HttpPut("{Id}")]
         public async Task<IActionResult> Editar([FromRoute] Guid Id, [FromBody] VehiculoRequest vehiculo)
